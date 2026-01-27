@@ -1,0 +1,7 @@
+streamlit
+python-dotenv
+sentence-transformers
+PyPDF2
+pandas
+altair
+streamlit-option-menu
