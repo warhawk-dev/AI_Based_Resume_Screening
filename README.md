@@ -107,6 +107,7 @@ PyPDF2
 pandas
 altair
 streamlit-option-menu
+torchvision
 ```
 
 ---
@@ -117,4 +118,7 @@ streamlit-option-menu
 - The `.env` file is used to store your HuggingFace API token. Make sure it is listed in `.gitignore` and never committed to version control.
 - Results are stored in Streamlit session state, so they persist when switching between tabs within the same session.
 - Only resumes that meet or exceed the minimum score threshold are displayed in results.
+- `torchvision` is not used directly by this app but is required as an indirect dependency. 
+  The `transformers` library (pulled in by `sentence-transformers`) internally references 
+  it at startup — omitting it causes noisy warnings in the terminal.
 
